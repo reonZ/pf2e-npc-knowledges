@@ -1,0 +1,13 @@
+{
+    "pf2e-npc-knowledges": {
+        "templates": {
+            "editLore": {
+                "save": "Save",
+                "cancel": "Cancel",
+                "unspecified": "Unspecific Lores",
+                "specific": "Specific Lores",
+                "hint": "Enter comma separated lores which will replace the generic ones in the sheet"
+            }
+        }
+    }
+}
