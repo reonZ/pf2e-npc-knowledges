@@ -1,0 +1,13 @@
+{
+    "pf2e-npc-knowledges": {
+        "templates": {
+            "editLore": {
+                "hint": "Entrez les connaissances séparées par des virgules qui remplaceront les connaissances génériques sur la feuille",
+                "save": "sauvegarder",
+                "cancel": "Effacer",
+                "unspecified": "Connaissances non spécifiques",
+                "specific": "Connaissances spécifiques"
+            }
+        }
+    }
+}
