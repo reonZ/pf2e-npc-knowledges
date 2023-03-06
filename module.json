@@ -2,19 +2,27 @@
     "id": "pf2e-npc-knowledges",
     "title": "PF2e Npc Knowledges",
     "author": "Idle",
-    "description": "Adds an option to set the lores for NPCs",
+    "description": "Adds the option to set the lores for NPCs",
     "authors": [
         {
             "name": "Idle",
             "discord": "Idle#3251"
         }
     ],
-    "esmodules": [
-        "scripts/main.js"
-    ],
-    "styles": [
-        "styles/styles.css"
-    ],
+    "esmodules": ["scripts/main.js"],
+    "compatibility": {
+        "minimum": "10.291",
+        "verified": "10"
+    },
+    "version": "1.0.0",
+    "manifestPlusVersion": "1.2.0",
+    "url": "https://github.com/reonZ/pf2e-npc-knowledges",
+    "readme": "https://github.com/reonZ/pf2e-npc-knowledges/blob/master/README.md",
+    "manifest": "https://raw.githubusercontent.com/reonZ/pf2e-npc-knowledges/master/module.json",
+    "download": "https://github.com/reonZ/pf2e-npc-knowledges/releases/download/1.0.0/module.zip",
+    "changelog": "https://github.com/reonZ/pf2e-npc-knowledges/blob/master/CHANGELOG.md",
+    "bugs": "https://github.com/reonZ/pf2e-npc-knowledges/issues",
+    "styles": ["styles/styles.css"],
     "languages": [
         {
             "lang": "en",
@@ -27,7 +35,6 @@
             "path": "lang/fr.json"
         }
     ],
-    "version": "1.0.0",
     "relationships": {
         "systems": [
             {
@@ -35,20 +42,9 @@
                 "type": "system",
                 "manifest": "https://raw.githubusercontent.com/foundryvtt/pf2e/master/system.json",
                 "compatibility": {
-                    "minimum": "4.3.0"
+                    "minimum": "4.8.3"
                 }
             }
         ]
-    },
-    "compatibility": {
-        "minimum": "10.288",
-        "verified": "10"
-    },
-    "manifestPlusVersion": "1.2.0",
-    "url": "https://github.com/reonZ/pf2e-npc-knowledges",
-    "readme": "https://github.com/reonZ/pf2e-npc-knowledges/blob/master/README.md",
-    "manifest": "https://raw.githubusercontent.com/reonZ/pf2e-npc-knowledges/master/module.json",
-    "download": "https://github.com/reonZ/pf2e-npc-knowledges/releases/download/1.0.0/module.zip",
-    "changelog": "https://github.com/reonZ/pf2e-npc-knowledges/releases",
-    "bugs": "https://github.com/reonZ/pf2e-npc-knowledges/issues"
+    }
 }
