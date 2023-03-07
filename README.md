@@ -11,3 +11,7 @@ More than one of each can be set, simply by separating them with commas.
 ![](./readme/result.webp)
 
 Once saved, the custom Lores will replace the generic ones on the sheet.
+
+# CHANGELOG
+
+You can see the changelog [HERE](./CHANGELOG.md)
