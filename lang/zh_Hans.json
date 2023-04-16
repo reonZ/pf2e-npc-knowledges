@@ -1,0 +1,13 @@
+{
+    "pf2e-npc-knowledges": {
+        "templates": {
+            "editLore": {
+                "save": "保存",
+                "cancel": "取消",
+                "specific": "特定学识",
+                "unspecified": "非特定学识",
+                "hint": "用英文逗号分割学识，这会替换角色卡中的一般学识"
+            }
+        }
+    }
+}
