@@ -1,3 +1,8 @@
+# 1.3.0
+
+-   fixed the module (dunno how long it has been broken)
+-   compatible with v11
+
 # 1.2.0
 
 -   added simple chinese localization
