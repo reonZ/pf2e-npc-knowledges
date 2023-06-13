@@ -20,28 +20,31 @@ function editLores(actor: NPCPF2e) {
     new EditLores(actor).render(true)
 }
 
-function replaceLore(html: JQuery, lores: string, selector: string) {
-    const $lore = knowledgeSelector(html, 'body', selector)
-    const title = $lore.attr('title')
-    const classes = $lore.attr('class')
-    const suffix = $lore
-        .text()
-        .replace('\n', '')
-        .trim()
-        .replace(/^.+? (\d+.+)$/, '$1')
-    const replacement = lores
-        .split(',')
-        .filter(lore => lore.trim())
-        .map(lore => `<div class="${classes}" title="${title}">${capitalize(lore.trim())} ${suffix}</div>`)
-        .join('')
-    $lore.replaceWith(replacement)
-}
-
 function replaceLores(actor: NPCPF2e, html: JQuery) {
-    const unspecified = getFlag<string>(actor, 'unspecified')
-    const specific = getFlag<string>(actor, 'specific')
-    if (unspecified) replaceLore(html, unspecified, '.unspecified-lore')
-    if (specific) replaceLore(html, specific, '.specific-lore')
+    const unspecifics = getFlag<string>(actor, 'unspecified')
+    const specifics = getFlag<string>(actor, 'specific')
+    if (!unspecifics && !specifics) return
+
+    const lores = actor.identificationDCs.lore
+    const body = knowledgeSelector(html, 'body', '')
+    body.find('.identification-skills').last().remove()
+
+    function tag(skills: string, dc: number, adjustment: string) {
+        const content = game.i18n.format('PF2E.Actor.NPC.Identification.Skills.Label', { skills, dc, adjustment })
+        return `<div class="tag-legacy identification-skills tooltipstered">${content}</div>`
+    }
+
+    function addTags(lores: string, { dc, start }: { dc: number; start: string }) {
+        const tags = lores
+            .split(',')
+            .filter(lore => lore.trim())
+            .map(lore => tag(lore, dc, start))
+            .join('')
+        body.append(tags)
+    }
+
+    addTags(unspecifics || 'Unspecific', lores[0])
+    addTags(specifics || 'Specific', lores[1])
 }
 
 function addEvents(actor: NPCPF2e, html: JQuery) {
